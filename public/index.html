@@ -16,7 +16,7 @@
       <input v-model="checked" type="radio" value="high">
       <label class="high" for="high">High</label>
       <input v-model="checked" type="radio" value="low">
-      <label for="low">Low</label>
+      <label class="low" for="low">Low</label>
       <button v-on:click="saveNewToDo">Save Item</button>
       <ul>
         <li v-for="(todo, priority) in todos" :class="todo.priority ? 'high':'low'">{{ todo.name }}</li>

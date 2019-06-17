@@ -19,10 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
           name: this.newToDo,
           priority: false
         });
-      } else {
+      } else if(this.checked === 'high') {
         this.todos.push({
           name: this.newToDo,
           priority: true
+        });
+      } else {
+        this.todos.push({
+          name: this.newToDo,
+          priority: false
         });
       }
         this.newToDo = "";
