@@ -9,18 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
         {name: "Clean bathroom", priority: false},
         {name: "Car's MOT", priority: true}
       ],
-      newToDo: ""
+      newToDo: "",
+      checked: ""
     },
     methods: {
       saveNewToDo: function(){
+      if(this.checked === 'low'){
         this.todos.push({
           name: this.newToDo,
           priority: false
         });
+      } else {
+        this.todos.push({
+          name: this.newToDo,
+          priority: true
+        });
+      }
         this.newToDo = "";
       },
     },
-  });
-
-
+});
 });
