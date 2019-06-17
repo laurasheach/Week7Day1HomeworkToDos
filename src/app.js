@@ -14,12 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       saveNewToDo: function(){
-      if(this.checked === 'low'){
-        this.todos.push({
-          name: this.newToDo,
-          priority: false
-        });
-      } else if(this.checked === 'high') {
+      if(this.checked === 'high'){
         this.todos.push({
           name: this.newToDo,
           priority: true
