@@ -13,9 +13,13 @@
   <h1>To Do's</h1>
   <div id="app">
       <input v-model="newToDo" type="text"/>
+      <input type="radio" value="high">
+      <label for="high">High</label>
+      <input type="radio" value="low">
+      <label for="low">Low</label>
       <button v-on:click="saveNewToDo">Save Item</button>
       <ul>
-        <li v-for="todo in todos">{{ todo }}</li>
+        <li v-for="(todo, priority) in todos" :class="todo.priority ? 'high':'low'">{{ todo.name }}</li>
       </ul>
   </div>
 </body>

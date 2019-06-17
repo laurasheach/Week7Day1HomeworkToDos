@@ -4,7 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: "#app",
     data: {
-      todos: ["Buy shopping", "Clean bathroom", "Car's MOT"],
+      todos: [
+        {name: "Buy shopping", priority: true},
+        {name: "Clean bathroom", priority: false},
+        {name: "Car's MOT", priority: true}
+      ],
       newToDo: ""
     },
     methods: {
